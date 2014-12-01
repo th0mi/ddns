@@ -47,7 +47,7 @@ else
      ]
    }
 UPDATE-JSON
-
+   echo "Updating IP to $IP"
    # do the update via AWS cli
    ${AWSBIN} route53 change-resource-record-sets --hosted-zone-id $ZONEID --change-batch file://$TMPFILE
    rm $TMPFILE
